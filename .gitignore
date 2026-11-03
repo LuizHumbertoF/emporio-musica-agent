@@ -1,0 +1,23 @@
+# Ambiente virtual
+venv/
+env/
+ENV/
+
+# Chaves de API e segredos
+.env
+
+# Ficheiros e pastas do Python
+__pycache__/
+*.py
+*.pyc
+*.pyd
+*.pyo
+.pytest_cache/
+
+# Configurações de editores de código (IDE)
+.vscode/
+.idea/
+
+# Ficheiros do Sistema Operativo
+.DS_Store
+Thumbs.db
