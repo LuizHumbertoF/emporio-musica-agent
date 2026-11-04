@@ -14,7 +14,7 @@ Este repositório contém a solução para o desafio técnico da vaga de Engenha
 
 1. **Clone o repositório e acesse a pasta:**
    ```bash
-   git clone <url-do-seu-repositorio>
+   git clone https://github.com/LuizHumbertoF/emporio-musica-agent.git
    cd emporio-musica-agent
    ```
 
