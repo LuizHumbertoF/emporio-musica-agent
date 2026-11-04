@@ -27,26 +27,27 @@ Este repositório contém a solução para o desafio técnico da vaga de Engenha
    venv\Scripts\activate
    ```
 
-3. **Instale as dependências:**
-   Para evitar o download pesado de bibliotecas CUDA caso não possua GPU, instale o PyTorch versão CPU primeiro, seguido das demais bibliotecas:
+3. 2. **Instale as dependências do projeto:**
    ```bash
-   pip install torch --index-url https://download.pytorch.org/whl/cpu
-   pip install streamlit langchain-groq langgraph pypdf faiss-cpu sentence-transformers langchain-community langchain-huggingface pandas
+   # 1. Instale o PyTorch versão CPU para evitar downloads pesados de GPU
+   pip install torch --index-url [https://download.pytorch.org/whl/cpu](https://download.pytorch.org/whl/cpu)
+
+   # 2. Instale os demais pacotes
+   pip install streamlit langchain langchain-groq langgraph pypdf faiss-cpu sentence-transformers langchain-community langchain-huggingface pandas python-dotenv
    ```
 
-4. **Configure a variável de ambiente (Provedor do Modelo):**
-   ```bash
-   # Linux/Mac:
-   export GROQ_API_KEY="gsk_sua_chave_aqui"
-   # Windows (PowerShell):
-   $env:GROQ_API_KEY="gsk_sua_chave_aqui"
+3. **Configure a variável de ambiente (Provedor do Modelo):**
+   Crie um arquivo chamado `.env` na raiz do repositório e adicione a sua chave de API da Groq:
+   ```text
+   GROQ_API_KEY="gsk_sua_chave_aqui"
    ```
+   *(Alternativa rápida via terminal: `echo "GROQ_API_KEY=gsk_sua_chave_aqui" > .env`)*
 
 5. **Execute a Interface Web:**
    ```bash
    streamlit run app.py
    ```
-   O navegador abrirá automaticamente em `http://localhost:8501`. Na primeira execução, o sistema fará o download do modelo de embeddings local (aprox. 80MB).
+   O navegador abrirá automaticamente em `http://localhost:8501`. Na primeira execução, o sistema fará o download do modelo de embeddings local (aprox. 80MB), aguarde o carregamento.
 
 ---
 
